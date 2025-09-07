@@ -1,0 +1,25 @@
+{
+    "project_name": "CRM Upgrade Initiative",
+    "sponsor": "Alice Smith",
+    "answers": [
+        {
+            "id": "q1",
+            "question": "Do you have approved budget?",
+            "answer": "Yes",
+            "score": 5
+        },
+        {
+            "id": "q2",
+            "question": "Project type",
+            "answer": "Infrastructure",
+            "score": 3
+        },
+        {
+            "id": "q3",
+            "question": "Expected budget",
+            "answer": "Between 11-100 million",
+            "score": 3
+        }
+    ],
+    "additional_context": "This project is high-priority for Q4 deliveries."
+}

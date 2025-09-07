@@ -1,0 +1,25 @@
+{
+    "project_title": "CRM Upgrade Initiative",
+    "project_description": "Migration of legacy CRM to Salesforce to improve scalability and customer data management.",
+    "project_budget": "Estimated 50 million USD",
+    "complexity_score": 3,
+    "recommended_pm_count": 2,
+    "rationale": "Cross-department dependencies and integration complexity justify score 3.",
+    "key_risks": [
+        "Data migration challenges",
+        "Integration delays"
+    ],
+    "supporting_documents": [
+        {
+            "id": "doc-001",
+            "source": "Policies/Procurement.pdf",
+            "excerpt": "Procurement approval required for >$1M",
+            "score": 0.95
+        }
+    ],
+    "diagnostics": {
+        "used_top_k": 3,
+        "retrieval_time_ms": 120,
+        "generation_time_ms": 890
+    }
+}

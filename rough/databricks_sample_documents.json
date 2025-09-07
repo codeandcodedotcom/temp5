@@ -1,0 +1,20 @@
+{
+  "documents": [
+    {
+      "id": "doc-001",
+      "content": "Company policy: procurement approval is required above $1,000,000.",
+      "source": "Policies/Procurement.pdf",
+      "score": 0.95,
+      "metadata": {
+        "page": 4
+      }
+    },
+    {
+      "id": "doc-002",
+      "content": "Past CRM migration project completed in 9 months with 2 project managers.",
+      "source": "Archive/Project_Migrations.docx",
+      "score": 0.87,
+      "metadata": {}
+    }
+  ]
+}
