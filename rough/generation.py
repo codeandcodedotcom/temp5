@@ -58,6 +58,30 @@ logger = get_logger(__name__)
 
 
 
+        resp = {
+            "project_title": parsed.get("project_title", data.get("project_name", "Untitled Project")),
+            "project_description": parsed.get("project_description", parsed.get("description", llm_text)),
+            "project_budget": parsed.get("project_budget", "Estimated TBD"),
+            "complexity_score": parsed.get("complexity_score", 3),
+            "recommended_pm_count": parsed.get("recommended_pm_count", 1),
+            "rationale": parsed.get("rationale", ""),
+            "key_risks": parsed.get("key_risks", []),
+            "supporting_documents": docs,
+            "diagnostics": {
+                "submission_id": submission_id,
+                "used_top_k": int(getattr(Config, "TOP_K", 3)),
+                "embedding_time_ms": embed_ms,
+                "retrieval_time_ms": retrieval_ms,
+                "generation_time_ms": generation_ms
+            },
+            "raw_llm_output": llm_text
+        }
+        return jsonify(resp), 200
+
+    except Exception as exc:
+        logger.exception("Error in /api/generation/ask")
+        return jsonify({"error": "Internal Server Error"}), 500
+
 
 @bp.route("/ask", methods=["POST"])
 def ask():
@@ -84,3 +108,4 @@ def ask():
     }
 
     return jsonify(dummy_response), 200
+
