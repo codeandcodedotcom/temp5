@@ -41,12 +41,16 @@ class Config:
     ENTRA_JWKS_URL = f"https://login.microsoftonline.com/{ENTRA_TENANT_ID}/discovery/v2.0/keys"
 
 
-    PROMPT_TEMPLATE =
-        (
-            "You are a helpful assistant.\n"
-            "Use ONLY the context and questionnaire data to answer. If the answer isn't in the context, say you don't know.\n\n"
-            "Context:\n{context}\n\n"
-            "Questionnaire:\n{questionnaire}\n\n"
-            "Question:\n{question}\n\n"
-            "Answer:"
-        )
+    PROMPT_TEMPLATE = """
+        You are a helpful project charter assistant. Using the provided context documents and the user's answers, produce a JSON object exactly with the following keys:
+        project_title, project_description, project_budget, complexity_score, recommended_pm_count, rationale, key_risks (array).
+        Do not include extra keys. If you cannot find specific info, use sensible defaults.
+
+        User answers:
+        {answers_text}
+
+        Context documents:
+        {context_text}
+
+        Return ONLY valid JSON (no explanatory text).
+        """
