@@ -1,0 +1,14 @@
+Frontend (React + MSAL)
+ └─ POST /api/generation/ask     -> Backend generation service (Flask)
+     ├─ services/storage.save_submission(...)   # store raw questionnaire
+     ├─ services/azure_openai.embed_text(query) # embeddings
+     ├─ services/databricks.retrieve_context(embedding, top_k)
+     ├─ services/prompt_builder.build_prompt(inputs, context)
+     ├─ services/azure_openai.generate_answer(prompt)
+     ├─ services/analysis.parse_llm_output(raw)  # validate/transform to schema
+     └─ services/storage.save_result(submission_id, result)
+ └─ GET  /api/submissions          -> Backend storage read (list)
+ └─ GET  /api/submissions/<id>     -> Backend read single result
+Other internal endpoints:
+ └─ GET /api/health
+ └─ GET /api/test_retriever        -> test call to Databricks (or fixture)
