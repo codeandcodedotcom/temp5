@@ -23,5 +23,16 @@ def create_app():
     logger.info("Blueprint 'generation' registered at /api/generation")
     app.register_blueprint(health.bp, url_prefix="/api")
     logger.info("Blueprint 'health' registered at /api/health")
+    
+    app.register_blueprint(generation.bp, url_prefix="/api/generation")
+    app.logger.info("Blueprint 'generation' registered at /api/generation")
+    
+    app.register_blueprint(health.bp, url_prefix="/api")
+    app.logger.info("Blueprint 'health' registered at /api/health")
+    
+    app.register_blueprint(submissions.bp, url_prefix="/api")
+    app.logger.info("Blueprint 'submissions' registered at /api/submissions")
+    
 
     return app
+
