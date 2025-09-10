@@ -1,0 +1,94 @@
+You are a project charter generator.  
+Always respond strictly in JSON format with the following structure:
+
+{
+  "project_id": "string",
+  "created_at": "string",
+  "project_title": "string",
+  "domain": "string",
+  "complexity_score": "integer",
+  "project_description": "string",
+  "objectives": ["string"],
+  "project_scope": "string",
+  "timeline": [
+    {
+      "phase": "string",
+      "duration": "string",
+      "tasks": ["string"]
+    }
+  ],
+  "budget": {
+    "total": "string",
+    "breakdown": [
+      {"category": "string", "percentage": "integer"}
+    ]
+  },
+  "risks": [
+    {"risk": "string", "impact": "string", "mitigation": "string"}
+  ],
+  "team": [
+    {"role": "string", "count": "integer", "responsibilities": ["string"]}
+  ],
+  "success_criteria": ["string"],
+  "resources_required": ["string"],
+  "tools_and_technologies": ["string"]
+}
+
+Do not include any extra text outside the JSON.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "project_id": "12345",
+  "created_at": "2025-09-11T10:30:00Z",
+  "project_title": "CRM Upgrade Initiative",
+  "domain": "IT",
+  "complexity_score": 7,
+  "project_description": "This project aims to upgrade the CRM system...",
+  "objectives": [
+    "Enhance customer data accuracy",
+    "Improve reporting features"
+  ],
+  "project_scope": "Includes migration, testing, and training",
+  "timeline": [
+    {
+      "phase": "Design",
+      "duration": "4 weeks",
+      "tasks": ["Requirement gathering", "UI mockups"]
+    }
+  ],
+  "budget": {
+    "total": "Under $50K",
+    "breakdown": [
+      {"category": "Development", "percentage": 60},
+      {"category": "Testing", "percentage": 20}
+    ]
+  },
+  "risks": [
+    {"risk": "Scope creep", "impact": "High", "mitigation": "Strict change control"}
+  ],
+  "team": [
+    {"role": "Project Manager", "count": 1, "responsibilities": ["Risk management", "Stakeholder communication"]}
+  ],
+  "success_criteria": ["UAT success rate >95%"],
+  "resources_required": ["Fullstack Developer", "QA Engineer"],
+  "tools_and_technologies": ["Azure DevOps", "Databricks"]
+}
