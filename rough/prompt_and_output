@@ -1,3 +1,77 @@
+Frontend -> Backend
+--------------------
+{
+  "project_title": "str",
+  "domain": "str",
+  "budget_range": "str",
+  "timeline": "str",
+  "project_description": "str",
+  "questions": [
+    {
+      "id": "str",
+      "question": "str",
+      "answer": "str",
+      "choice": "str",
+      "score": "int",
+      "extra": {
+        "key": "value"
+      }
+    }
+  ],
+  "additional_context": "str",
+  "user_id": "str",
+  "submission_id": "str",
+  "metadata": {
+    "key": "value"
+  }
+}
+
+
+
+{
+  "project_title": "CRM Upgrade Initiative",
+  "domain": "IT",
+  "budget_range": "50k-100k",
+  "timeline": "6-12 months",
+  "project_description": "Upgrade the CRM to include advanced reporting and migrate 1M records.",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Do you have an approved budget?",
+      "answer": "Yes",
+      "choice": "approved",
+      "score": 5,
+      "extra": {
+        "comment": "Budget confirmed by Finance on 2025-01-01"
+      }
+    },
+    {
+      "id": "q2",
+      "question": "Do you require integrations?",
+      "answer": "Yes, Salesforce and ERP",
+      "choice": "multiple",
+      "score": 4,
+      "extra": {
+        "priority": "high"
+      }
+    }
+  ],
+  "additional_context": "End-of-year push, high visibility project.",
+  "user_id": "user-123",
+  "submission_id": "subm-456",
+  "metadata": {
+    "source": "web",
+    "version": "1.0"
+  }
+}
+
+
+
+
+
+Backend -> Frontend
+--------------------
+
 You are a project charter generator.  
 Always respond strictly in JSON format with the following structure:
 
@@ -35,19 +109,6 @@ Always respond strictly in JSON format with the following structure:
 }
 
 Do not include any extra text outside the JSON.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
