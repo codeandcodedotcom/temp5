@@ -41,3 +41,8 @@ def user_activity():
     except Exception:
         logger.exception("Failed to fetch user activity")
         return jsonify({"error":"failed"}), 500
+
+
+curl http://127.0.0.1:5000/api/kpi/department-charters
+curl "http://127.0.0.1:5000/api/kpi/returning-users?days=15"
+curl "http://127.0.0.1:5000/api/kpi/user-activity?limit=5"
