@@ -78,6 +78,12 @@ logger = get_logger(__name__)
         }
         return jsonify(resp), 200
 
+    if submission_id:
+        try:
+            storage.save_result(submission_id, response)
+        except Exception:
+            current_app.logger.exception("Failed to save result")
+
     except Exception as exc:
         logger.exception("Error in /api/generation/ask")
         return jsonify({"error": "Internal Server Error"}), 500
@@ -108,4 +114,5 @@ def ask():
     }
 
     return jsonify(dummy_response), 200
+
 
